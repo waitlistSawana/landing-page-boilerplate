@@ -1,6 +1,7 @@
 "use client";
 import PhMoonFill from "@/components/icons/moon";
 import PhSunBold from "@/components/icons/sun";
+import { siteConfig } from "@/config/site";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
@@ -18,7 +19,7 @@ export function ThemedButton() {
   }
 
   return (
-    <div onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+    <div className="cursor-pointer" onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
       {theme === "light" ? <PhMoonFill /> : <PhSunBold />}
     </div>
   );
